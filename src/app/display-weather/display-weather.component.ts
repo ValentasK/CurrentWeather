@@ -13,7 +13,9 @@ export class DisplayWeatherComponent implements OnInit {
   weatherDetails:any;
 
   ngOnInit(): void {
-    this.Data.getData
+    this.Data.getData("London").subscribe(Data => {
+      console.log(Data);
+    })
   }
 
 }
