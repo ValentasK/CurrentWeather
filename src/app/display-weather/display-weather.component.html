@@ -3,5 +3,14 @@
   <h3>Your City: {{ cityName }} </h3>
 
   <input type="text" [(ngModel)]="cityName">
+  <button (click)="check()">Check</button>
+
+  <h3>Location: {{weatherDetails.request.query}}</h3>
+  <h3>Local time: {{weatherDetails.location.localtime}}</h3>
+
+  <h3>Temperature: {{weatherDetails.current.temperature}}</h3>
+  <h3>Wind speed: {{weatherDetails.current.wind_speed}}</h3>
+  <h3>Wind direction: {{weatherDetails.current.wind_dir}}</h3>
+  <h3>Wind degree: {{weatherDetails.current.wind_degree}}</h3>
 
 </div>
