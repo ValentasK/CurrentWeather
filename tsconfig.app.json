@@ -7,7 +7,9 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "./src/app/DTO/InvalidCity.ts",
+    "./src/app/DTO/Error.ts"
   ],
   "include": [
     "src/**/*.d.ts"

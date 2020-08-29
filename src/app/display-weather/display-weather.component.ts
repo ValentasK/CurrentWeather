@@ -3,6 +3,7 @@ import { DataService } from "../data.service";
 import { WeatherInfo } from '../DTO/WeatherInfo';
 
 
+
 @Component({
   selector: 'app-display-weather',
   templateUrl: './display-weather.component.html',
@@ -12,7 +13,7 @@ export class DisplayWeatherComponent implements OnInit {
 
   constructor(private Data:DataService) { }
 
-  weatherDetails:WeatherInfo;
+  weatherDetails: WeatherInfo;
   cityName:string;
 
   ngOnInit(): void {}
@@ -27,6 +28,11 @@ export class DisplayWeatherComponent implements OnInit {
       console.log(errorResp);
     })
   }
+
+  nu():boolean{
+   return this.weatherDetails.hasOwnProperty("location");
+  }
+
 
 
 }

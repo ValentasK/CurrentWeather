@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { WeatherInfo } from "./DTO/WeatherInfo";
 
+
 @Injectable({
   providedIn: 'root'
 })

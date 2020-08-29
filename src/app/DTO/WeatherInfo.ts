@@ -6,6 +6,11 @@ export interface WeatherInfo {
     request: Request;
     location: Location;
     current: Current;
+    success: boolean;
+    error: Error;
 }
+
+
+
 
 
