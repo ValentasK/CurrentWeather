@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
 
+
 @Component({
   selector: 'app-display-weather',
   templateUrl: './display-weather.component.html',
@@ -11,11 +12,20 @@ export class DisplayWeatherComponent implements OnInit {
   constructor(private Data:DataService) { }
 
   weatherDetails:any;
+  cityName:string;
 
-  ngOnInit(): void {
-    this.Data.getData("London").subscribe(Data => {
+  ngOnInit(): void {}
+
+  check(){
+    this.Data.getData(this.cityName).subscribe(Data => {
       console.log(Data);
+      this.weatherDetails = Data;
+    },
+    errorResp =>{
+      console.log("City not found");
+      console.log(errorResp);
     })
   }
+
 
 }
